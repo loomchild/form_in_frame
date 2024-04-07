@@ -1,0 +1,9 @@
+<%= form_with model: post, data: {turbo_frame: "_top"} do |f| %>
+  <div class="text-red-500">
+    <%= post.errors.full_messages.join(', ') %>
+  </div>
+
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end%>
+
